@@ -1,0 +1,38 @@
+==Symbols==
+
+=====app.o======
+
+$ arm-none-eabi-nm.exe app.o
+00000000 T main
+00000000 D string_buffer
+00000064 C string_buffer2
+00000000 R string_buffer3
+         U UART_Send_string
+
+======uart.o=====
+
+$ arm-none-eabi-nm.exe uart.o
+00000000 T UART_Send_string
+
+
+=====startup.o=====
+
+$ arm-none-eabi-nm.exe startup.o
+         U main
+00000000 T reset
+         U stack_top
+00000008 t stop
+
+
+=====lab1.elf=====
+
+$ arm-none-eabi-nm.exe lab1.elf
+00010010 T main
+00010000 T reset
+000111a4 B stack_top
+00010008 t stop
+00010078 D string_buffer
+00010140 B string_buffer2
+000100dc R string_buffer3
+00010028 T UART_Send_string
+
