@@ -1,0 +1,85 @@
+$ make objdump
+arm-none-eabi-objdump.exe -h startup.o
+
+startup.o:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000008  00000000  00000000  00000034  2**1
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  0000003c  2**0
+                  ALLOC
+  3 .vectors      00000050  00000000  00000000  0000003c  2**0
+                  CONTENTS, RELOC, READONLY
+  4 .ARM.attributes 00000021  00000000  00000000  0000008c  2**0
+                  CONTENTS, READONLY
+  5 .debug_line   0000003b  00000000  00000000  000000ad  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  6 .debug_info   00000064  00000000  00000000  000000e8  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  7 .debug_abbrev 00000014  00000000  00000000  0000014c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_aranges 00000020  00000000  00000000  00000160  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+arm-none-eabi-objdump.exe -h main.o
+
+main.o:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000088  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00000000  00000000  000000bc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  000000bc  2**0
+                  ALLOC
+  3 .rodata       00000001  00000000  00000000  000000bc  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .debug_info   000000e4  00000000  00000000  000000bd  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  5 .debug_abbrev 0000007a  00000000  00000000  000001a1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_loc    00000038  00000000  00000000  0000021b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_aranges 00000020  00000000  00000000  00000253  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  8 .debug_line   0000005c  00000000  00000000  00000273  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  9 .debug_str    000000ef  00000000  00000000  000002cf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .comment      00000012  00000000  00000000  000003be  2**0
+                  CONTENTS, READONLY
+ 11 .ARM.attributes 00000033  00000000  00000000  000003d0  2**0
+                  CONTENTS, READONLY
+ 12 .debug_frame  0000002c  00000000  00000000  00000404  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+arm-none-eabi-objdump.exe -h lab2.elf
+
+lab2.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000e1  08000000  08000000  00008000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000002  20000000  20000000  00010000  2**0
+                  ALLOC
+  2 .debug_info   00000148  00000000  00000000  000080e1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_abbrev 0000008e  00000000  00000000  00008229  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_loc    00000038  00000000  00000000  000082b7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000040  00000000  00000000  000082f0  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000097  00000000  00000000  00008330  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    000000b6  00000000  00000000  000083c7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .comment      00000011  00000000  00000000  0000847d  2**0
+                  CONTENTS, READONLY
+  9 .ARM.attributes 00000031  00000000  00000000  0000848e  2**0
+                  CONTENTS, READONLY
+ 10 .debug_frame  0000002c  00000000  00000000  000084c0  2**2
+                  CONTENTS, READONLY, DEBUGGING

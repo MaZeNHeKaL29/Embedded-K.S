@@ -1,0 +1,17 @@
+$ make symbols
+arm-none-eabi-nm.exe startup.o
+00000000 t _reset
+00000006 t _vector_handler
+         U main
+arm-none-eabi-nm.exe main.o
+00000001 C g_bss
+00000000 R g_const
+00000001 C g_data
+00000000 T main
+arm-none-eabi-nm.exe lab2.elf
+080000d8 t _reset
+080000de t _vector_handler
+20000000 B g_bss
+080000e0 T g_const
+20000001 B g_data
+08000050 T main
